@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abinanth A | HTML</title>
+    <link rel="stylesheet" type="text/css" href="web.css">
+    <link rel="script" href="java.js">
+    <link rel="icon" href="icon2.jpg"
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <div class="container">
+        <div class="header">
+            <div class="logo"></div>
+                <div class="logtxt"></div>
+                    <a href="index.html" class="name">Abinanth A </a>
+                    <a href="index.html" class="abt">Home</a>
+                    <a href="#learning" class="learn">Learnings</a>
+                    <a href="#me" class="cont">Contact Me</a>
+        <div class="main-body">
+            <div class="left" id="about-me">
+                <p class="content">Heyy! I'm Abinanth... <br><br>This is a sample project to understand the <br> basics of a website or about html. To make this website<br>I used html and css 
+                </p>
+            </div>
+            <div class="right">
+                <img class="img" src="image.jpg"> 
+            </div>
+            <div class="lrn" id="learning">
+                <h1 class="edu">Learnings</h1>
+                <h2 class="crs">HTML/CSS-60%</h2>
+                <h2 class="crs">Python-65%</h2>
+                <h2 class="crs">Javascript-30%</h2>
+            </div>
+            <div class="cnt" id="me">
+                <h1 class="info">Suggestions</h1>
+                <label class="mail">Email</label>
+                <br>
+                <input class="email" type="text" placeholder="example@gmail.com">
+                <br>
+                <br>
+                <label class="mail">Comment</label>
+                <br>
+                <input class="cmt" type="text" placeholder="Type your thoughts here...">
+                <br>
+                <input id="sbt" type="submit" value="Submit">
+            </div>
+        </div>
+        </div>
+
+    </div>
+    <script>
+        $("#sbt").click(function(){
+            alert("Thank You for your Suggestion")
+        })
+    </script>
+</body>
+</html>

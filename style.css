@@ -1,0 +1,49 @@
+.calc{
+    width: 400px;
+    height: 600px;
+    background: black;
+    margin-left: 40px;
+    margin-top: 50px;
+}
+#screen{
+    width: 80%;
+    height: 40px;
+    margin-left: 34px;
+    margin-top: 15px;
+    pointer-events: none;
+}
+.btn{
+    width: 60px;
+    height: 45px;
+    margin-left: 30px;
+    margin-top: 30px;
+    background: aqua;
+}
+.header{
+    background: rgb(0, 0, 0);
+    width: 1602px;
+    height: 95px;
+    margin-left: -8px;
+    margin-top: -8px;
+}
+.logo{
+    width: 50%;
+    height: 28px;
+}
+.name{
+    color: rgb(94, 228, 165);
+    font-family: Madelyn;
+    font-size: 50px;
+    margin-left: 80px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.abt{
+    color: rgb(94, 228, 165);
+    font-family: Madelyn;
+    font-size: 50px;
+    margin-left: 1200px;
+    font-weight: bolder;
+    text-decoration: none;
+}

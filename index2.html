@@ -1,58 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abinanth A | HTML</title>
-    <link rel="stylesheet" type="text/css" href="web.css">
-    <link rel="script" href="java.js">
-    <link rel="icon" href="icon2.jpg"
-</head>
-<body>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <div class="container">
-        <div class="header">
-            <div class="logo"></div>
-                <div class="logtxt"></div>
-                    <a href="index.html" class="name">Abinanth A </a>
-                    <a href="index.html" class="abt">Home</a>
-                    <a href="#learning" class="learn">Learnings</a>
-                    <a href="#me" class="cont">Contact Me</a>
-        <div class="main-body">
-            <div class="left" id="about-me">
-                <p class="content">Heyy! I'm Abinanth... <br><br>This is a sample project to understand the <br> basics of a website or about html. To make this website<br>I used html and css 
-                </p>
-            </div>
-            <div class="right">
-                <img class="img" src="image.jpg"> 
-            </div>
-            <div class="lrn" id="learning">
-                <h1 class="edu">Learnings</h1>
-                <h2 class="crs">HTML/CSS-60%</h2>
-                <h2 class="crs">Python-65%</h2>
-                <h2 class="crs">Javascript-30%</h2>
-            </div>
-            <div class="cnt" id="me">
-                <h1 class="info">Suggestions</h1>
-                <label class="mail">Email</label>
-                <br>
-                <input class="email" type="text" placeholder="example@gmail.com">
-                <br>
-                <br>
-                <label class="mail">Comment</label>
-                <br>
-                <input class="cmt" type="text" placeholder="Type your thoughts here...">
-                <br>
-                <input id="sbt" type="submit" value="Submit">
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpeg" href="/photo2.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abinanth A | HTML Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+      .page-hero {
+        padding: 10rem 2rem 4rem;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .page-hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+      }
+      .page-hero p {
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+        line-height: 1.8;
+      }
+      .learnings-section {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+      }
+      .skill-bar-container {
+        margin-bottom: 2rem;
+      }
+      .skill-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+      }
+      .skill-bar {
+        width: 100%;
+        height: 12px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 999px;
+        overflow: hidden;
+      }
+      .skill-progress {
+        height: 100%;
+        background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+        border-radius: 999px;
+        transition: width 1s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Background Elements -->
+    <div class="bg-gradient-1"></div>
+    <div class="bg-gradient-2"></div>
+
+    <!-- Navigation -->
+    <header class="header">
+      <nav class="nav-container">
+        <a href="/index.html" class="logo">Abinanth</a>
+        <div class="nav-links">
+          <a href="/index.html" class="nav-link">Home</a>
+          <a href="#learning" class="nav-link">Learnings</a>
+          <a href="#suggestions" class="nav-link">Suggestions</a>
         </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="page-hero fade-in-up">
+        <h1>Heyy! I'm Abinanth...</h1>
+        <p>This is a sample project to understand the basics of a website or about HTML. To make this website I used HTML and CSS.</p>
+      </section>
+
+      <!-- Learnings -->
+      <section id="learning" class="learnings-section fade-in-up">
+        <h2 class="section-title">Learnings</h2>
+        
+        <div class="skill-bar-container">
+          <div class="skill-info">
+            <span>HTML/CSS</span>
+            <span>60%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 60%;"></div>
+          </div>
         </div>
 
-    </div>
-    <script>
-        $("#sbt").click(function(){
-            alert("Thank You for your Suggestion")
-        })
-    </script>
-</body>
+        <div class="skill-bar-container">
+          <div class="skill-info">
+            <span>Python</span>
+            <span>65%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 65%;"></div>
+          </div>
+        </div>
+
+        <div class="skill-bar-container">
+          <div class="skill-info">
+            <span>Javascript</span>
+            <span>30%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 30%;"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Suggestions -->
+      <section id="suggestions" class="section fade-in-up">
+        <div class="contact-container">
+          <h2 class="section-title">Suggestions</h2>
+          <p class="contact-subtitle">Leave your suggestions for my learnings!</p>
+          <form class="contact-form" onsubmit="event.preventDefault(); window.location.href='mailto:abinanthaex@gmail.com?subject=New Suggestion&body=' + encodeURIComponent(document.getElementById('suggestion').value);">
+            <div class="form-group">
+              <label for="suggestion">Your Suggestion</label>
+              <textarea id="suggestion" name="suggestion" rows="4" required placeholder="Type here..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">Submit Suggestion</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">Abinanth A</div>
+        <p>&copy; 2026 Abinanth A. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>

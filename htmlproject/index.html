@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style.css">
     <style>
       .page-hero {
         padding: 10rem 2rem 4rem;
@@ -62,9 +62,9 @@
     <!-- Navigation -->
     <header class="header">
       <nav class="nav-container">
-        <a href="/index.html" class="logo">Abinanth</a>
+        <a href="/" class="logo">Abinanth</a>
         <div class="nav-links">
-          <a href="/index.html" class="nav-link">Home</a>
+          <a href="/" class="nav-link">Home</a>
           <a href="#learning" class="nav-link">Learnings</a>
           <a href="#suggestions" class="nav-link">Suggestions</a>
         </div>
@@ -118,7 +118,7 @@
         <div class="contact-container">
           <h2 class="section-title">Suggestions</h2>
           <p class="contact-subtitle">Leave your suggestions for my learnings!</p>
-          <form class="contact-form" onsubmit="event.preventDefault(); window.location.href='mailto:abinanthaex@gmail.com?subject=New Suggestion&body=' + encodeURIComponent(document.getElementById('suggestion').value);">
+          <form class="contact-form" id="suggestionForm">
             <div class="form-group">
               <label for="suggestion">Your Suggestion</label>
               <textarea id="suggestion" name="suggestion" rows="4" required placeholder="Type here..."></textarea>
@@ -137,6 +137,6 @@
       </div>
     </footer>
 
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="../main.js"></script>
   </body>
 </html>

@@ -40,13 +40,13 @@ const sections = document.querySelectorAll('section[id]');
 
 window.addEventListener('scroll', () => {
   const scrollY = window.pageYOffset;
-  
+
   sections.forEach(current => {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 100; // Offset for header
     const sectionId = current.getAttribute('id');
     const navLink = document.querySelector(`.nav-links a[href*="${sectionId}"]`);
-    
+
     if (navLink) {
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
         navLink.classList.add('active');
@@ -73,4 +73,46 @@ window.addEventListener('load', () => {
     const heroElements = document.querySelectorAll('.hero-section.fade-in-up');
     heroElements.forEach(el => el.classList.add('visible'));
   }, 100);
+});
+
+// Contact Form submission via Web3Forms
+document.querySelectorAll('.contact-form').forEach(form => {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData);
+
+    data.access_key = "b411afa5-3951-494a-b416-de5239e6536f";
+
+    const submitBtn = form.querySelector('.btn-submit');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+      const result = await response.json();
+      if (result.success) {
+        alert('Thank you! Your message has been sent successfully.');
+        form.reset();
+      } else {
+        alert('Something went wrong. Please try again.');
+        console.error(result);
+      }
+    } catch (error) {
+      alert('Something went wrong. Please try again.');
+      console.error(error);
+    } finally {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
+  });
 });

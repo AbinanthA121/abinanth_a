@@ -86,7 +86,7 @@
         <h2 class="section-title">Featured Projects</h2>
         <div class="projects-grid">
           <!-- Project 1 -->
-          <a href="/index2.html" class="project-card">
+          <a href="/htmlproject/" class="project-card">
             <div class="project-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
@@ -103,7 +103,7 @@
           </a>
 
           <!-- Project 2 -->
-          <a href="/index3.html" class="project-card">
+          <a href="/onlinecalculator/" class="project-card">
             <div class="project-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
@@ -133,7 +133,7 @@
         <div class="contact-container">
           <h2 class="section-title">Get in Touch</h2>
           <p class="contact-subtitle">Interested in collaborating or just want to say hi? I'd love to hear from you!</p>
-          <form class="contact-form" onsubmit="event.preventDefault(); window.location.href='mailto:abinanthaex@gmail.com?subject=Contact from ' + encodeURIComponent(document.getElementById('name').value) + '&body=' + encodeURIComponent(document.getElementById('message').value) + '%0A%0AReply to: ' + encodeURIComponent(document.getElementById('email').value);">
+          <form class="contact-form" id="contactForm">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required placeholder="John Doe">

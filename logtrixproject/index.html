@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpeg" href="/photo2.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logtrix | Logistics Simplified</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      .page-hero {
+        padding: 10rem 2rem 5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .hero-copy h1 {
+        font-size: clamp(3rem, 6vw, 4.75rem);
+        margin-bottom: 1.5rem;
+        line-height: 1.05;
+      }
+
+      .hero-copy p {
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+        line-height: 1.8;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        padding: 0.45rem 0.9rem;
+        border-radius: 999px;
+        margin-bottom: 1.25rem;
+        border: 1px solid var(--border-color);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .hero-highlight {
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+
+      .hero-actions {
+        margin-top: 2rem;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .hero-panel {
+        background: linear-gradient(180deg, rgba(30, 41, 59, 0.95), rgba(17, 24, 39, 0.95));
+        border: 1px solid var(--border-color);
+        border-radius: 24px;
+        padding: 2rem;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      }
+
+      .hero-panel h2 {
+        margin-bottom: 1.5rem;
+        font-size: 1.4rem;
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .stat-card {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        padding: 1rem;
+      }
+
+      .stat-card strong {
+        display: block;
+        font-size: 1.5rem;
+        margin-bottom: 0.35rem;
+      }
+
+      .stat-card span {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+      }
+
+      .overview-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+      }
+
+      .overview-copy {
+        text-align: center;
+        color: var(--text-secondary);
+        font-size: 1.08rem;
+        line-height: 1.9;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .feature-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 18px;
+        padding: 2rem;
+        transition: all var(--transition-normal);
+      }
+
+      .feature-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--accent-primary);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.22);
+      }
+
+      .feature-card h3 {
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+      }
+
+      .feature-card p {
+        color: var(--text-secondary);
+      }
+
+      .feature-card p + p {
+        margin-top: 0.8rem;
+      }
+
+      .tech-section {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .tech-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 24px;
+        padding: 2.5rem;
+      }
+
+      .tech-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .tech-item {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        padding: 1.25rem;
+      }
+
+      .tech-item strong {
+        display: block;
+        margin-bottom: 0.35rem;
+      }
+
+      .tech-item span {
+        color: var(--text-secondary);
+      }
+
+      .download-note {
+        margin-top: 1rem;
+        color: var(--text-muted);
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 768px) {
+        .page-hero {
+          grid-template-columns: 1fr;
+          text-align: center;
+          padding-top: 8rem;
+        }
+
+        .hero-actions {
+          justify-content: center;
+        }
+
+        .hero-panel {
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-gradient-1"></div>
+    <div class="bg-gradient-2"></div>
+
+    <header class="header">
+      <nav class="nav-container">
+        <a href="/" class="logo">Logtrix</a>
+        <div class="nav-links">
+          <a href="#overview" class="nav-link">Overview</a>
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#tech" class="nav-link">Tech</a>
+          <a href="#download" class="nav-link">Download</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero fade-in-up">
+        <div class="hero-copy">
+          <span class="hero-badge">High-performance logistics app</span>
+          <h1>Logistics simplified. Trips tracked. Earnings maximized.</h1>
+          <p>
+            <span class="hero-highlight">Logtrix</span> is a streamlined, high-performance mobile
+            solution designed specifically for truck owners, fleet operators, and logistics
+            professionals.
+          </p>
+          <p>
+            Built with a clean startup aesthetic, it eliminates messy paperwork by digitizing trip
+            logs, automating expense tracking, and computing net earnings in real time, even when
+            completely offline.
+          </p>
+          <p>
+            With intuitive single-screen data entry and intelligent automation, Logtrix helps you
+            spend less time handling logistics and more time growing your business.
+          </p>
+          <div class="hero-actions">
+            <a href="#download" class="btn btn-primary">Download APK</a>
+            <a href="#features" class="btn btn-secondary">Explore Features</a>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <h2>Why teams choose Logtrix</h2>
+          <div class="hero-stats">
+            <div class="stat-card">
+              <strong>Offline</strong>
+              <span>Keep working from remote routes without depending on internet access.</span>
+            </div>
+            <div class="stat-card">
+              <strong>Real-Time</strong>
+              <span>Get instant rent, batta, and final balance calculations without manual math.</span>
+            </div>
+            <div class="stat-card">
+              <strong>Fast Entry</strong>
+              <span>Log multiple trips, materials, weights, and fuel expenses in under a minute.</span>
+            </div>
+            <div class="stat-card">
+              <strong>Growth Ready</strong>
+              <span>See profitability more clearly and make sharper operational decisions.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="overview" class="overview-section fade-in-up">
+        <h2 class="section-title">Built For Modern Transport Operations</h2>
+        <p class="overview-copy">
+          Logtrix simplifies day-to-day logistics work for truck owners and fleet operators by
+          centralizing trip logging, expense capture, and earnings visibility into one clean
+          workflow. It is designed to be practical in the field, fast enough for high-volume use,
+          and reliable enough to trust during real operations.
+        </p>
+      </section>
+
+      <section id="features" class="section fade-in-up">
+        <h2 class="section-title">Key Features</h2>
+        <div class="features-grid">
+          <article class="feature-card">
+            <h3>Profile-Aware Automation</h3>
+            <p>
+              Select a registered truck ID and Logtrix automatically looks up and pre-fills the
+              assigned driver's information instantly.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Dynamic Multi-Trip Entry</h3>
+            <p>
+              Effortlessly log complex days with dynamic rows for multiple trips, material
+              descriptions, weights, and fuel expenses.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Instant Financial Calculations</h3>
+            <p>
+              Automatically calculates total rent, driver allowances (Batta), and final balances
+              the second you finish a trip.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Offline-First Reliability</h3>
+            <p>
+              Data is stored immediately in a fast local database and syncs to the cloud when
+              connectivity returns.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Expandable Dashboard</h3>
+            <p>
+              View the last 10 days chronologically, filter by route, and expand detailed cards to
+              review historical trip expenses and earnings.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Built For Real Operators</h3>
+            <p>
+              Every screen is designed to reduce admin friction, improve accuracy, and help busy
+              logistics teams focus on growth instead of paperwork.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="tech" class="tech-section fade-in-up">
+        <div class="tech-card">
+          <h2 class="section-title">Built With Modern Tech</h2>
+          <div class="tech-list">
+            <div class="tech-item">
+              <strong>Frontend</strong>
+              <span>Flutter and Material Design 3 for a fluid, polished mobile UI.</span>
+            </div>
+            <div class="tech-item">
+              <strong>State Management</strong>
+              <span>Riverpod for fast, reactive updates and clean app architecture.</span>
+            </div>
+            <div class="tech-item">
+              <strong>Database</strong>
+              <span>Isar NoSQL for lightweight, high-speed local storage offline.</span>
+            </div>
+            <div class="tech-item">
+              <strong>Cloud Sync</strong>
+              <span>Firebase for backup, sync, and connected access when online.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="download" class="section fade-in-up">
+        <div class="contact-container">
+          <h2 class="section-title">Download Logtrix</h2>
+          <p class="contact-subtitle">
+            Download the official Logtrix Android app and start managing trips, expenses, and
+            earnings with a reliable tool built for real transport operations.
+          </p>
+          <a href="../src/assets/app-release.apk" class="btn btn-primary" download>Download APK</a>
+          <p class="download-note">
+            Note: You may need to allow installation from unknown sources in your Android
+            settings to install the APK.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">Logtrix</div>
+        <p>&copy; 2026 Logtrix. Logistics simplified.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

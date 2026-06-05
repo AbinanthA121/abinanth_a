@@ -26,7 +26,6 @@
         <a href="#home-section" class="logo">Abinanth</a>
         <div class="nav-links">
           <a href="#home-section" class="nav-link active">Home</a>
-          <a href="#stories-section" class="nav-link">Stories</a>
           <a href="#project-section" class="nav-link">Projects</a>
           <a href="#contact-section" class="nav-link btn-contact">Contact me</a>
         </div>
@@ -62,7 +61,6 @@
           </blockquote>
           <div class="hero-actions">
             <a href="#project-section" class="btn btn-primary">View Projects</a>
-            <a href="#stories-section" class="btn btn-secondary">Read Stories</a>
           </div>
         </div>
         <div class="hero-image-wrapper">
@@ -74,30 +72,6 @@
               id="profile-img"
             />
             <div class="image-glow"></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="stories-section" class="section fade-in-up">
-        <h2 class="section-title">Featured Stories</h2>
-        <div class="stories-grid">
-          <div class="story-card coming-soon-card">
-            <div class="story-content">
-              <h3>More Stories Coming Soon</h3>
-              <p>Stay tuned for more stories and experiences.</p>
-              <div class="badge">Coming Soon</div>
-            </div>
-          </div>
-          <div class="story-card">
-            <div class="story-content">
-              <h3>BEYOND THE BALANCE</h3>
-              <p class="story-preview">
-                A few months back in Kerala, there lived a poor couple named Raju and Rema, who
-                made a living as daily wage workers. One day, Raju's mother fell from the terrace
-                and was injured...
-              </p>
-              <a href="#" class="read-more" onclick="openStoryModal(event)">Read full story &rarr;</a>
-            </div>
           </div>
         </div>
       </section>
@@ -197,6 +171,53 @@
             </div>
             <button type="submit" class="btn btn-primary btn-submit">Send via Email</button>
           </form>
+          <div class="contact-direct fade-in-up">
+            <a class="direct-email" href="mailto:abinanthaex@gmail.com">abinanthaex@gmail.com</a>
+            <div class="social-links" aria-label="Social links">
+              <a
+                class="social-link"
+                href="https://github.com/Abinanth-A"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub profile"
+              >
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 .5C5.65.5.98 5.35.98 11.78c0 4.98 3.15 9.2 7.52 10.49.55.1.75-.24.75-.53 0-.26-.01-1.12-.02-2.04-3.06.68-3.71-1.33-3.71-1.33-.5-1.31-1.23-1.66-1.23-1.66-1-.7.08-.69.08-.69 1.11.08 1.7 1.17 1.7 1.17.99 1.73 2.59 1.23 3.22.94.1-.73.39-1.23.7-1.51-2.44-.28-5.01-1.25-5.01-5.55 0-1.23.43-2.23 1.14-3.02-.11-.28-.49-1.43.11-2.98 0 0 .93-.3 3.05 1.15.88-.25 1.83-.37 2.77-.38.94.01 1.89.13 2.78.38 2.11-1.45 3.04-1.15 3.04-1.15.6 1.55.22 2.7.11 2.98.71.79 1.14 1.79 1.14 3.02 0 4.31-2.57 5.26-5.02 5.54.4.35.75 1.03.75 2.08 0 1.5-.01 2.71-.01 3.08 0 .29.2.64.76.53 4.36-1.29 7.51-5.51 7.51-10.49C23.02 5.35 18.35.5 12 .5Z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                class="social-link"
+                href="https://www.instagram.com/abinanth.4/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram profile"
+              >
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -211,75 +232,6 @@
       </div>
     </footer>
 
-    <div id="story-modal" class="modal">
-      <div class="modal-content">
-        <span class="close-modal" onclick="closeStoryModal()">&times;</span>
-        <h2>BEYOND THE BALANCE</h2>
-        <div class="modal-body">
-          <p>
-            A few months back in Kerala, there lived a poor couple named Raju and Rema, who made a
-            living as daily wage workers. One day, Raju's mother fell from the terrace and was
-            injured. Raju took her to the government hospital, where they informed him that they
-            lacked the necessary equipment for surgery and advised him to take his mother to a city
-            or private hospital. He then took his mother to the city hospital. Upon arrival, the
-            hospital staff immediately admitted her to the ICU and started treatment. After some
-            time, a nurse approached Raju to inquire about the patient's details. When he asked
-            about his mother's condition, she replied, "We can't say anything now," and left.
-          </p>
-          <p>
-            His mother remained in the ICU for a couple of days before being transferred to the
-            ward. The hospital then urged Raju to settle the payments as soon as possible. Despite
-            explaining his financial difficulties, the hospital staff was inflexible, and Raju
-            tried to arrange the payment in installments. During this time, Raju continued to work
-            while his wife stayed with his mother.
-          </p>
-          <p>
-            One day, a co-worker, aware of Raju's situation, mentioned an app that offered instant
-            loans with minimal documentation. Raju requested help with the loan application, and
-            his co-worker assisted him in installing the app on his phone. After work Raju would go
-            home bathe, and then visit the hospital. One evening, he remembered the loan app and
-            decided to try it. The app required access to his phone's gallery, contacts, and
-            camera. Being illiterate, Raju granted the app permission. He applied for a loan of
-            Rs. 50,000, providing his Aadhaar number. The money was credited to his bank account
-            immediately.
-          </p>
-          <p>
-            Relieved, he went to the hospital and paid the next installment. The app then demanded
-            the first interest payment, which he made. To clear the hospital bill and help his
-            mother home, he took another loan of Rs. 100,000, despite the higher interest rate.
-            However, Raju struggled to repay the loan, working tirelessly but falling short on the
-            installments. He then received a threatening message stating that if he didn't pay the
-            interest within two days, his and his wife's photos would be morphed and sent to their
-            friends and family.
-          </p>
-          <p>
-            Overwhelmed by fear, he worked frantically to gather money but failed to meet the
-            deadline. True to its threat, the loan app sent the morphed photos to their contacts.
-            Devastated, Raju and his wife decided to end their lives by consuming poison.
-          </p>
-        </div>
-      </div>
-    </div>
-
     <script type="module" src="./main.js"></script>
-    <script>
-      function openStoryModal(e) {
-        e.preventDefault();
-        document.getElementById('story-modal').classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function closeStoryModal() {
-        document.getElementById('story-modal').classList.remove('active');
-        document.body.style.overflow = 'auto';
-      }
-
-      window.onclick = function (event) {
-        const modal = document.getElementById('story-modal');
-        if (event.target == modal) {
-          closeStoryModal();
-        }
-      };
-    </script>
   </body>
 </html>
